@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "Halloween Wheel",
+    "slug": "coffeeocean-halloween-wheel",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0b1722",
+    "ios": {
+      "bundleIdentifier": "com.coffeeocean.halloweenwheel",
+      "supportsTablet": true,
+      "isTabletOnly": true,
+      "requireFullScreen": true,
+      "infoPlist": {
+        "CFBundleAllowMixedLocalizations": true,
+        "UIStatusBarHidden": true,
+        "UIViewControllerBasedStatusBarAppearance": false,
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "locales": {
+      "en": "./locales/en.json",
+      "pl": "./locales/pl.json"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "The camera reads the total on your receipt. Photos stay on this iPad and are not saved.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "barcodeScannerEnabled": false
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 240,
+          "backgroundColor": "#0b1722"
+        }
+      ],
+      "expo-localization",
+      "expo-font",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "17.0"
+          }
+        }
+      ]
+    ]
+  }
+}
